@@ -119,7 +119,7 @@ local PlayersItem = {}
 function DepotCoffreVENDEUR()
     local StockPlayer = RageUI.CreateMenu("", "Coffre")
 
-    ESX.TriggerServerCallback('eCrafter:getPlayerInventory', function(inventory)
+    ESX.TriggerServerCallback('Coffre:getPlayerInventory', function(inventory)
         RageUI.Visible(StockPlayer, not RageUI.Visible(StockPlayer))
     while StockPlayer do
         Citizen.Wait(0)
@@ -163,7 +163,7 @@ function CoffreRetraitVendeur()
                             if v.count > 0 then
                             RageUI.ButtonWithStyle("~r~→~s~ "..ESX.GetWeaponLabel(v.name), nil, {RightLabel = v.count}, true, function(Hovered, Active, Selected)
                                 if Selected then
-                                    ESX.TriggerServerCallback('eCrafter:removeArmoryWeapon', function()
+                                    ESX.TriggerServerCallback('Coffre:removeArmoryWeapon', function()
                                         CoffreRetraitVendeur()
                                     end, v.name)
                                 end

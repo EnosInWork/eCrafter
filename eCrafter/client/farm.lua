@@ -245,10 +245,12 @@ Citizen.CreateThread(function()
             end
 
             if Dist_Mech <= 15.0 then
+				Waiting = 0  
 				DrawMarker(Config.Marker.Type, Config.meche.position.x, Config.meche.position.y, Config.meche.position.z-0.99, nil, nil, nil, -90, nil, nil, Config.Marker.Size.x, Config.Marker.Size.y, Config.Marker.Size.z, Config.Marker.Color.R, Config.Marker.Color.G, Config.Marker.Color.B, 200)
             end
 
-            if Dist_Mech <= 1.0 then   
+            if Dist_Mech <= 1.0 then 
+				Waiting = 0    
 				RageUI.Text({ message = "Appuyez sur ~m~[E]~s~ pour ouvrir →→ ~m~Récolte Mèches", time_display = 1 })
 				if IsControlJustPressed(1,51) then           
 					recoltemeche()
@@ -256,11 +258,13 @@ Citizen.CreateThread(function()
             end
 
 			if Dist_Canon <= 15.0 then
+				Waiting = 0  
 				DrawMarker(Config.Marker.Type, Config.canon.position.x, Config.canon.position.y, Config.canon.position.z-0.99, nil, nil, nil, -90, nil, nil, Config.Marker.Size.x, Config.Marker.Size.y, Config.Marker.Size.z, Config.Marker.Color.R, Config.Marker.Color.G, Config.Marker.Color.B, 200)
 
             end
 
             if Dist_Canon <= 1.0 then   
+				Waiting = 0  
 				RageUI.Text({ message = "Appuyez sur ~m~[E]~s~ pour ouvrir →→ ~m~Récolte Canons", time_display = 1 })
 				if IsControlJustPressed(1,51) then           
 					recoltecanon()
@@ -268,11 +272,13 @@ Citizen.CreateThread(function()
             end
 
 			if Dist_Levier <= 15.0 then
+				Waiting = 0  
 				DrawMarker(Config.Marker.Type, Config.levier.position.x, Config.levier.position.y, Config.levier.position.z-0.99, nil, nil, nil, -90, nil, nil, Config.Marker.Size.x, Config.Marker.Size.y, Config.Marker.Size.z, Config.Marker.Color.R, Config.Marker.Color.G, Config.Marker.Color.B, 200)
 
             end
 
             if Dist_Levier <= 1.0 then   
+				Waiting = 0  
 				RageUI.Text({ message = "Appuyez sur ~m~[E]~s~ pour ouvrir →→ ~m~Récolte Leviers", time_display = 1 })
 				if IsControlJustPressed(1,51) then           
 					recoltelevier()
